@@ -4,13 +4,16 @@ import math
 #n - pierwsza zmienna
 #k - druga zmienna
 
-n = int(input())
-k = int(input())
+n = int(input("Podaj liczbę n (w liczniku): "))
+k = int(input("Podaj liczbę k (w mianowniku): "))
 
-def symbol_newtona(n,k):
-  if k==0 or k==n:
-    return 1
-  else:
-    return n / k * symbol_newtona(n-1, k-1)
+if  k == n:
+    print(1)
 
-print(symbol_newtona(n,k))
+if k > n:
+    print(0)
+else:
+    x = math.factorial(n)
+    y = math.factorial(k)
+    symbolNewtona = x // (y*(n-k))
+    print(symbolNewtona)
