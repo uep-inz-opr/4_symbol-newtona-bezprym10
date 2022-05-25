@@ -7,7 +7,7 @@ import math
 n = int(input("Podaj liczbę n (w liczniku): "))
 k = int(input("Podaj liczbę k (w mianowniku): "))
 
-if  k == n:
+if  k==1 or k == n:
     print(1)
 
 if k > n:
